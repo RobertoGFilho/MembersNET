@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MembersNET"
+             x:DataType="local:MainPage"
+             x:Class="MembersNET.MainPage"
+             Title=".NET Members">
+
+    <CollectionView ItemsSource="{Binding Members}">
+        <CollectionView.ItemTemplate>
+            <DataTemplate x:DataType="local:Member">
+                <HorizontalStackLayout Spacing="12" Padding="24,12">
+
+                    <!--avatar-->
+                    <Image Source="{Binding AvatarUrl}" HeightRequest="40" />
+
+                    <!--login-->
+                    <Label Text="{Binding Login}" FontSize="Large" />
+
+                </HorizontalStackLayout>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+</ContentPage>
